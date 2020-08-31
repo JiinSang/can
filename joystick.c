@@ -208,23 +208,6 @@ int main(int argc, char *argv[])
 
                     sprintf(des_angle_str, "%x", des_angle);
 
-                    //printf("%s\n",VCUcommand);
-                    //printf("[0]: %c\n",des_angle_str[0] );
-                    //printf("[1]: %c\n",des_angle_str[1] );
-
-                    /*
-                    if(des_angle < 16){
-                        char tmp;
-                        tmp = des_angle_str[0];
-                        des_angle_str[0] = des_angle_str[1];
-                        des_angle_str[1] = tmp;
-                    }                    
-                    
-                    printf("------------------------\n");
-                    printf("[0]: %c\n",des_angle_str[0] );
-                    printf("[1]: %c\n",des_angle_str[1] );
-                    */
-
                     //assign value
                     if(des_angle_str[1] == '\0'){
                         VCUcommand[21] = '0';
@@ -239,8 +222,6 @@ int main(int argc, char *argv[])
                         VCUcommand[22] = *(des_angle_str+1);
                     }
                     
-
-                    //printf("%s\n",VCUcommand);
                     fp = popen(VCUcommand, "r");
                     printf("%s\n", VCUcommand);
 
