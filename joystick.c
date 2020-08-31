@@ -195,7 +195,6 @@ int main(int argc, char *argv[])
                     }
                     
 
-                    //printf("%s\n",VCUcommand);
                     fp = popen(VCUcommand, "r");
                     printf("%s\n", VCUcommand);
 
@@ -222,6 +221,7 @@ int main(int argc, char *argv[])
                         VCUcommand[22] = *(des_angle_str+1);
                     }
                     
+
                     fp = popen(VCUcommand, "r");
                     printf("%s\n", VCUcommand);
 
